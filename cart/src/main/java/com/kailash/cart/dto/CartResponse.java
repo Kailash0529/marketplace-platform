@@ -1,0 +1,22 @@
+package com.kailash.cart.dto;
+
+import com.kailash.cart.entity.CartItem;
+import lombok.*;
+import org.springframework.data.annotation.Id;
+
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class CartResponse {
+
+    @Id
+    private String id;
+    private String memberId;
+    private int totalItems;
+    private Double totalPrice;
+    private List<CartItem> items;
+}
